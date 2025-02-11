@@ -312,6 +312,8 @@ impl HttpContextProvider for ImpersonateOption {
             Impersonate::Chrome129 => v129::http_context,
             Impersonate::Chrome130 => v130::http_context,
             Impersonate::Chrome131 => v131::http_context,
+            Impersonate::Chrome132 => v132::http_context,
+            Impersonate::Chrome133 => v133::http_context,
 
             Impersonate::SafariIos17_2 => safari_ios_17_2::http_context,
             Impersonate::SafariIos17_4_1 => safari_ios_17_4_1::http_context,

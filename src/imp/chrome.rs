@@ -254,6 +254,9 @@ mod tls {
         #[builder(default = AlpsProtos::HTTP2, setter(into))]
         alps_protos: AlpsProtos,
 
+        #[builder(default = false)]
+        alps_use_new_codepoint: bool,
+
         #[builder(default = false, setter(into))]
         enable_ech_grease: bool,
 
@@ -279,6 +282,7 @@ mod tls {
                 .pre_shared_key(val.pre_shared_key)
                 .enable_ech_grease(val.enable_ech_grease)
                 .alps_protos(val.alps_protos)
+                .alps_use_new_codepoint(val.alps_use_new_codepoint)
                 .cert_compression_algorithm(CERT_COMPRESSION_ALGORITHM)
                 .build()
         }
